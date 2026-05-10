@@ -32,10 +32,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlin {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
+    kotlinOptions {
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -48,17 +46,17 @@ android {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
+    val composeBom = platform("androidx.compose:compose-bom:2024.02.00")
     implementation(composeBom)
-
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
-    implementation("androidx.activity:activity-compose:1.9.0")
-
+    
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    
     // TV Compose - specify versions explicitly to avoid conflicts
-    implementation("androidx.tv:tv-foundation:1.0.0-alpha11")
-    implementation("androidx.tv:tv-material:1.0.0-beta01")
-
+    implementation("androidx.tv:tv-foundation:1.0.0-alpha10")
+    implementation("androidx.tv:tv-material:1.0.0-alpha10")
+    
     // Compose dependencies
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -66,15 +64,14 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.material:material-icons-extended")
-
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
-    implementation("io.coil-kt:coil-compose:2.6.0")
+    
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2024.05.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2024.02.00"))
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
