@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.atvl.launcher.app-merged_res-50:/mipmap-mdpi_ic_launcher_round.xml.flat",
+        "source": "com.atvl.launcher.app-main-52:/mipmap-mdpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.atvl.launcher.app-merged_res-50:/mipmap-mdpi_ic_launcher.xml.flat",
+        "source": "com.atvl.launcher.app-main-52:/mipmap-mdpi/ic_launcher.xml"
+    }
+]
